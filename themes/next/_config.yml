@@ -674,6 +674,12 @@ motion:
 # Fancybox
 fancybox: true
 
+duoshuo:
+  enable: true
+  shortname: your-duoshuo-shortname
+
+  language: zh-Hans
+
 # Progress bar in the top during page loading.
 pace: false
 # Themes list:
