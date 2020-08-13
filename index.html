@@ -176,62 +176,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3>一，JS数据类型之问——概念<h3/> 
-
-<h5>1.JS原始数据类型有哪些？引用数据类型有哪些？<h5/>
-在 JS 中，存在着 7 种原始值，分别是：<br/>
-* boolean
-* null
-* undefined
-* number
-* string
-* symbol
-* bigint
-
-<p>引用数据类型:<br/><br>对象Object（包含普通对象-Object，数组对象-Array，正则对象-RegExp，日期对象-Date，数学函数-Math，函数对象-Function）</p>
-<h5>2.说出下面运行的结果，解释原因。<h5/> 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">  person.age = <span class="number">26</span></span><br><span class="line">  person = &#123;</span><br><span class="line">    name: <span class="string">&#x27;hzj&#x27;</span>,</span><br><span class="line">    age: <span class="number">18</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> person</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> p1 = &#123;</span><br><span class="line">  name: <span class="string">&#x27;fyq&#x27;</span>,</span><br><span class="line">  age: <span class="number">19</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> p2 = test(p1)</span><br><span class="line"><span class="built_in">console</span>.log(p1) <span class="comment">// -&gt; ?</span></span><br><span class="line"><span class="built_in">console</span>.log(p2) <span class="comment">// -&gt; ?</span></span><br></pre></td></tr></table></figure>
-结果：
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p1：&#123;<span class="attr">name</span>: “fyq”, <span class="attr">age</span>: <span class="number">26</span>&#125;</span><br><span class="line">p2：&#123;<span class="attr">name</span>: “hzj”, <span class="attr">age</span>: <span class="number">18</span>&#125;</span><br></pre></td></tr></table></figure>
-> 原因: 在函数传参的时候传递的是对象在堆中的内存地址值，test函数中的实参person是p1对象的内存地址，通过调用person.age = 26确实改变了p1的值，但随后person变成了另一块内存空间的地址，并且在最后将这另外一份内存空间的地址返回，赋给了p2。
-
-<h5>3.null是对象吗？为什么？<h5/>
-
-<h5>4.'1'.toString()为什么可以调用？<h5/>
-
-<h5>5.0.1+0.2为什么不等于0.3？<h5/>
-
-<h5>6.如何理解BigInt？<h5/>
-
-<h3>第二篇: JS数据类型之问——检测<h3/>
-<h5>1. typeof 是否能正确判断类型？<h5/>
-
-<h5>2. instanceof能否判断基本数据类型？<h5/>
-
-<h5>3. 能不能手动实现一下instanceof的功能？<h5/>
-
-<h5>4. Object.is和===的区别？<h5/>
-
-<h3>第三篇: JS数据类型之问——转换<h3/>
-
-<h5>1. [] == ![]结果是什么？为什么？<h5/>
-
-<h5>2. JS中类型转换有哪几种？<h5/>
-
-<h5>3. == 和 ===有什么区别？<h5/>
-<h5>4. 对象转原始类型是根据什么流程运行的？<h5/>
-<h5>5. 如何让if(a == 1 && a == 2)条件成立？<h5/>
-<h3>第四篇: 谈谈你对闭包的理解<h3/>
-<h3>第五篇: 谈谈你对原型链的理解<h3/>
-<h3>第六篇: JS如何实现继承？<h3/>
-<h5><h5/>
+        <h4 id="一，JS数据类型之问——概念"><a href="#一，JS数据类型之问——概念" class="headerlink" title="一，JS数据类型之问——概念"></a>一，JS数据类型之问——概念</h4><p>1.JS原始数据类型有哪些？引用数据类型有哪些？<br>在 JS 中，存在着 7 种原始值，分别是：</p>
+        
       
 
       
+
 
     </div>
+
     <div class="article-info article-info-index">
       
+
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
@@ -274,6 +230,7 @@
       
       <div class="clearfix"></div>
     </div>
+
   </div>
 </article>
 
@@ -319,43 +276,33 @@
 ​    先在Github 建一个仓库
 ​    下载 Gitbash 到本地 
 ​    在本地建立一个空目录文件夹，
-​    右键git bash here   执行git init 
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#生成sshkey 将id_rsa.pub文件里面的sshkey  复制到github  setting GPG keys 里面</span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;your email&quot;</span></span><br><span class="line"></span><br><span class="line">#设置好sshkey后 从github拉取代码</span><br><span class="line">git pull path</span><br><span class="line">#添加到暂存区</span><br><span class="line">Git add</span><br><span class="line"># 提交</span><br><span class="line">Git commit -m “commnet”</span><br><span class="line"># 将本地代码push到github仓库</span><br><span class="line">git push -u origin master</span><br><span class="line"># 查看设置</span><br><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h6>二，hexo 生成博客</h6>
-​    1.在git init初始化的目录 安装hexo。
-​    2.在配置相应的主题
-​    3.安装评论插件Valine （api 基本很详细 之前找了很多评论插件 用不了 disqus，gitalk 都试了一下）
-<a>https://valine.js.org/</a>
-
-<h6>三，hexo的一些命令</h6>
-​     hexo d  -g 将代码推送到github并部署
-     hexo s 启动服务
-     hexo new “name” 生成新的指定页面 md文件（编译后是在首页）
-     hexo new page “name” 生成在目录里面的文件（编译后在子页面）
+​    右键git bash here   执行git init
+        
       
 
       
+
 
     </div>
+
     <div class="article-info article-info-index">
       
+
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">valine</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
         		</li>
       		
 		</ul>
@@ -387,6 +334,7 @@
       
       <div class="clearfix"></div>
     </div>
+
   </div>
 </article>
 
@@ -508,15 +456,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">valine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
             
             <div class="clearfix"></div>
