@@ -156,6 +156,144 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JS灵魂之问" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/13/JS%E7%81%B5%E9%AD%82%E4%B9%8B%E9%97%AE/">JS灵魂之问</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/13/JS%E7%81%B5%E9%AD%82%E4%B9%8B%E9%97%AE/" class="archive-article-date">
+  	<time datetime="2020-08-13T08:06:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3>一，JS数据类型之问——概念<h3/> 
+
+<h5>1.JS原始数据类型有哪些？引用数据类型有哪些？<h5/>
+在 JS 中，存在着 7 种原始值，分别是：<br/>
+* boolean
+* null
+* undefined
+* number
+* string
+* symbol
+* bigint
+
+<p>引用数据类型:<br/><br>对象Object（包含普通对象-Object，数组对象-Array，正则对象-RegExp，日期对象-Date，数学函数-Math，函数对象-Function）</p>
+<h5>2.说出下面运行的结果，解释原因。<h5/> 
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">  person.age = <span class="number">26</span></span><br><span class="line">  person = &#123;</span><br><span class="line">    name: <span class="string">&#x27;hzj&#x27;</span>,</span><br><span class="line">    age: <span class="number">18</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> person</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> p1 = &#123;</span><br><span class="line">  name: <span class="string">&#x27;fyq&#x27;</span>,</span><br><span class="line">  age: <span class="number">19</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> p2 = test(p1)</span><br><span class="line"><span class="built_in">console</span>.log(p1) <span class="comment">// -&gt; ?</span></span><br><span class="line"><span class="built_in">console</span>.log(p2) <span class="comment">// -&gt; ?</span></span><br></pre></td></tr></table></figure>
+结果：
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p1：&#123;<span class="attr">name</span>: “fyq”, <span class="attr">age</span>: <span class="number">26</span>&#125;</span><br><span class="line">p2：&#123;<span class="attr">name</span>: “hzj”, <span class="attr">age</span>: <span class="number">18</span>&#125;</span><br></pre></td></tr></table></figure>
+> 原因: 在函数传参的时候传递的是对象在堆中的内存地址值，test函数中的实参person是p1对象的内存地址，通过调用person.age = 26确实改变了p1的值，但随后person变成了另一块内存空间的地址，并且在最后将这另外一份内存空间的地址返回，赋给了p2。
+
+<h5>3.null是对象吗？为什么？<h5/>
+
+<h5>4.'1'.toString()为什么可以调用？<h5/>
+
+<h5>5.0.1+0.2为什么不等于0.3？<h5/>
+
+<h5>6.如何理解BigInt？<h5/>
+
+<h3>第二篇: JS数据类型之问——检测<h3/>
+<h5>1. typeof 是否能正确判断类型？<h5/>
+
+<h5>2. instanceof能否判断基本数据类型？<h5/>
+
+<h5>3. 能不能手动实现一下instanceof的功能？<h5/>
+
+<h5>4. Object.is和===的区别？<h5/>
+
+<h3>第三篇: JS数据类型之问——转换<h3/>
+
+<h5>1. [] == ![]结果是什么？为什么？<h5/>
+
+<h5>2. JS中类型转换有哪几种？<h5/>
+
+<h5>3. == 和 ===有什么区别？<h5/>
+<h5>4. 对象转原始类型是根据什么流程运行的？<h5/>
+<h5>5. 如何让if(a == 1 && a == 2)条件成立？<h5/>
+<h3>第四篇: 谈谈你对闭包的理解<h3/>
+<h3>第五篇: 谈谈你对原型链的理解<h3/>
+<h3>第六篇: JS如何实现继承？<h3/>
+<h5><h5/>
+      
+
+      
+
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/13/JS%E7%81%B5%E9%AD%82%E4%B9%8B%E9%97%AE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+  
     <article id="post-使用HEXO-Valine评论搭建博客记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -204,84 +342,45 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">valine</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/杂文//" class="article-tag-list-link color3">杂文</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/博客//" class="article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/08/11/%E4%BD%BF%E7%94%A8HEXO-Valine%E8%AF%84%E8%AE%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/11/hello-world/" class="archive-article-date">
-  	<time datetime="2020-08-11T03:44:08.018Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/11/hello-world/">展开全文 >></a>
         </p>
       
 
@@ -399,6 +498,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">valine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
