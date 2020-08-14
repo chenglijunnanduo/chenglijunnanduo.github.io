@@ -205,7 +205,7 @@
      hexo new page “name” 生成在目录里面的文件（编译后在子页面）
 
           
-            <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+            <section id="comments" class="comments" style="margin:10px;padding:10px;background:#fff;">
               
                 <span id="/2020/08/11/%E4%BD%BF%E7%94%A8HEXO-Valine%E8%AF%84%E8%AE%BA%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" class="leancloud-visitors" data-flag-title="使用HEXO+Valine评论搭建博客记录" style="font-size: 12px;
             margin-right: 10px;
@@ -215,6 +215,10 @@
           <i class="leancloud-visitors-count">10000</i>
         </span>
               
+                <style>
+                  .comments{margin:30px;padding:10px;background:#fff}
+                  @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+                </style>
               <div id="vcomment" class="comment"></div>
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
@@ -233,6 +237,28 @@ window.onload = function() {
 	  visitor: "true"
     });
   }
+
+document.body.addEventListener('click', function(e) {
+  if (e.target.classList.contains('vsubmit')) {
+    const email = document.querySelector('input[type=email]');
+    const nick = document.querySelector('input[name=nick]');
+    const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+    if (!email.value || !nick.value || !reg.test(email.value)) {
+      const str = `<div class="valert txt-center"><div class="vtext" style="color: red;">请填写正确的昵称和邮箱！</div></div>`;
+      const vmark = document.querySelector('.vmark');
+      vmark.innerHTML = str;
+      vmark.style.display = 'block';
+
+      e.stopPropagation();
+
+      setTimeout(function() {
+        vmark.style.display = 'none';
+        vmark.innerHTML = '';
+      }, 2500);
+    }
+  }
+}, true);
+
   </script>
 
             </section>
@@ -358,6 +384,11 @@ window.onload = function() {
       </div>
     </a>
   
+  
+    <a href="/2020/07/02/%E4%BD%BF%E7%94%A8react16.4.2%20+%20antd%203.x%20%E5%BC%80%E5%8F%91%E4%B8%AD%20%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%8C%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用react16.4.2 + antd 3.x 开发中 遇到的一些问题，和解决方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -489,6 +520,46 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Notepad++ tidy2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">atomikos jta spring boot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">oracle timestamp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式 单例模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">lombok使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">UnsupportedOperationException</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">rabbitMQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">linux mysql 远程服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">springmvc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
@@ -498,6 +569,38 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">valine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">500 springboot mybatis eclipse 报错500</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">小Q书桌 win10兼容</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">正则表达式 java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">maven pom Unknown Exception</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mybatis-plus java</a>
               </li>
             
             <div class="clearfix"></div>
