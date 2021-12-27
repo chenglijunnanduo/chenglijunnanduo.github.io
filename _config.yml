@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: 'Tool Man'
+subtitle: 'Tool Man'
+description: '人生短短几十年'
+keywords: ''
+author: 陈利军
+language: 'zh-CN'
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -97,9 +97,31 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
-
+#theme: yilia
+theme: hexo-theme-yilia-plus
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: 'git'
+# repository:  git@github.com:chenglijunnanduo/chenglijunnanduo.github.io.git
+  repository:  git@gitee.com:I-Love-You/chenglijunnanduo.github.io.git
+  branch: master
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: true
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
